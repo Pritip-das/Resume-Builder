@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resumeForm">
+        <div class="form-background">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>RESUME BUILDER</h2>
+                </div>
+        
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name * :</label>
+                        <input type="text" id="name" name="name" autocomplete="on" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="photo">Profile Photo * :</label>
+                        <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/jpg" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Phone Number * :</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="on" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email * :</label>
+                        <input type="email" id="email" name="email" autocomplete="on" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" autocomplete="on"></textarea required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile:</label required>
+                        <input type="url" id="linkedin" name="linkedin" >
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="github">GitHub Profile:</label required>
+                        <input type="url" id="github" name="github">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="profile">Profile:</label required>
+                        <textarea id="profile" name="profile" ></textarea>
+                    </div>
+        
+                    <div class="form-group" id="edu">
+                        <label for="education">Education:</label>
+                        <textarea id="education" class="eduField" name="education" rows="3"></textarea>
+        
+                        <div id="addButtonE">
+                            <button class="add" onclick="addNewEdu()" type="button">Add</button>
+                        </div>
+                    </div>
+        
+                    <div class="form-group" id="skill">
+                        <label for="skills">Skills:</label>
+                        <textarea id="skills" class="skillsField" name="skills"></textarea>
+        
+                        <div id="addButtonS">
+                            <button class="add" onclick="addNewSkill()" type="button">Add</button>
+                        </div>
+                    </div>
+        
+                    <div class="form-group" id="exp">
+                        <label for="experience">Experience:</label>
+                        <textarea id="experience" class="
+                        expField" name="experience" rows="3" ></textarea>
+        
+                        <div id="addButtonEx">
+                            <button class="add" onclick="addNewExp()" type="button">Add</button>
+                        </div>
+                    </div>
+        
+                    <div class="form-group" id="ach">
+                        <label for="achievements">Achievements:</label>
+                        <textarea id="achievements" class="
+                        achField" name="achievements" rows="3" ></textarea>
+        
+                        <div id="addButtonA">
+                            <button class="add" onclick="addNewAch()" type="button">Add</button>
+                        </div>
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <button class="generate" onclick="generateResume()" type="button">Generate CV</button>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+  
+
+<!-- cv template -->
+
+<div class="cv">
+  <div class="container">
+      <header>
+          <div class="header-container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <h1 id="nameT">John Doe</h1>
+                </div>
+                <div class="profile-photo">
+                    <img id="photoT" src="profile photo.jpg" alt="John Doe">
+                </div>
+            </div>
+        </div>
+        </header>
+      <div class="content">
+
+          <section class="contact">
+              <p id="phoneT"><strong>Phone:</strong></p>
+              <p id="emailT" ><strong>Email:</strong><p>
+              <p id="addressT" ><strong>Address:</strong></p>
+              <p id="linkedinT" ><strong>Website:</strong></p>
+              <p id="githubT" ><strong>Website:</strong></p>
+          </section>
+
+          <section class="profile">
+              <h2 class="cv-heading">Objective</h2>
+              <p id="profileT"></p>
+          </section>
+
+          <section class="skills">
+              <h2 class="cv-heading">SKILLS</h2>
+              <ul id="skillsT" >
+                  <li ></li>
+              </ul>
+          </section>
+
+          <section class="experience">
+              <h2 class="cv-heading">EXPERIENCE</h2>
+              <ul id="expT">
+                <li></li>
+              </ul>
+
+          </section>
+
+          <section class="education">
+              <h2 class="cv-heading">EDUCATION</h2>
+             <ul id="eduT" >
+                <li></li>
+             </ul>
+          </section>
+
+          <section class="achievements">
+              <h2 class="cv-heading">ACHIEVEMENTS</h2>
+            <ul id="achT">
+                <li></li>
+            </ul>
+          </section>
+      </div>
+      <div class="form-group">
+        <button class="printCv" onclick="printCV()" type="submit">Print CV</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
